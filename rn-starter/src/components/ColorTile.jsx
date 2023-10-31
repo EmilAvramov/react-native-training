@@ -1,11 +1,15 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
-export const ListScreen = () => {
+export const ColorTile = ({ color }) => {
 	return (
-		<View>
-			<Text>List Screen</Text>
-		</View>
+		<View
+			style={{
+				height: 100,
+				width: 100,
+				backgroundColor: color,
+			}}
+		/>
 	);
 };
 
