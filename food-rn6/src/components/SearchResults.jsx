@@ -7,9 +7,11 @@ import {
 	TouchableOpacity,
 } from 'react-native';
 import { SearchTile } from './SearchTile';
-import { withNavigation } from 'react-navigation'
+import { useNavigation } from "@react-navigation/native";
 
-const SearchResults = ({ title, results, navigation }) => {
+export const SearchResults = ({ title, results }) => {
+	const navigation = useNavigation();
+
 	if (!results.length) {
 		return null
 	}
@@ -46,5 +48,3 @@ const styles = StyleSheet.create({
 		marginBottom: 10,
 	},
 });
-
-export default withNavigation(SearchResults);
